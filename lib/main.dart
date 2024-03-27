@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1project/home_page.dart';
+import 'package:flutter_application_1project/pages/home_page.dart';
+import 'package:flutter_application_1project/pages/login_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,7 +17,23 @@ class MyApp extends StatelessWidget {
     //'const' for constant values, 'final' for values can't be reassigned but computed at runtime
 
     return MaterialApp(
-      home:HomePage(),
+      // home:HomePage(),      as homepage is mentioned in routes so here it will not be mentioned
+      //code for darktheme:
+      // themeMode: ThemeMode.dark,
+      // darkTheme: ThemeData(
+      //   brightness: Brightness.dark
+      //),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.green),
+      darkTheme: ThemeData(
+        brightness: Brightness.light,
+      ),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => LoginPage(),
+        "/login": (context) => LoginPage(),
+        "/home": (context) => HomePage(),
+      }
     );
   }
 }
