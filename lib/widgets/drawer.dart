@@ -9,7 +9,7 @@ class MyDrawer extends StatelessWidget {
     final imageUrl = "https://www.shutterstock.com/image-vector/man-shirt-tie-businessman-avatar-male-548848999";
     return Drawer(
         child: Container(
-          color: Color.fromARGB(255, 245, 240, 199),
+          color: Color.fromARGB(255, 244, 241, 215),
           child: ListView(
             padding: EdgeInsets.zero,
                 children: [
@@ -18,10 +18,10 @@ class MyDrawer extends StatelessWidget {
             child: UserAccountsDrawerHeader(
               margin: EdgeInsets.zero,
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 114, 169, 20),
+                color: Color.fromARGB(255, 210, 164, 218),
                ),
-              accountName: Text("Jacob Rimson", style: TextStyle(color: Colors.black)),
-              accountEmail:Text("jacob56@gmail.com", style: TextStyle(color: Colors.black)),
+              accountName: Text("Jacob Rimson", style: TextStyle(color: Color.fromARGB(175, 0, 0, 0))),
+              accountEmail:Text("jacob56@gmail.com", style: TextStyle(color: Color.fromARGB(175, 0, 0, 0))),
               currentAccountPicture: CircleAvatar(
                 backgroundImage: NetworkImage(imageUrl),
               ) ,
@@ -37,9 +37,25 @@ class MyDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(
+              CupertinoIcons.bag
+              ),
+              title: Text("  order history",
+              textScaleFactor: 1.2,
+              ),
+          ),
+          ListTile(
+            leading: Icon(
+              CupertinoIcons.cart
+              ),
+              title: Text("  bag",
+              textScaleFactor: 1.2,
+              ),
+          ),
+          ListTile(
+            leading: Icon(
               CupertinoIcons.mail
               ),
-              title: Text("  mail",
+              title: Text("  contact us",
               textScaleFactor: 1.2,
               ),
           ),
@@ -47,7 +63,7 @@ class MyDrawer extends StatelessWidget {
             leading: Icon(
               CupertinoIcons.profile_circled
               ),
-              title: Text("  add account",
+              title: Text("  account",
               textScaleFactor: 1.2,
               ),
           ),
